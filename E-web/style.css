@@ -1,0 +1,564 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:200;300;400;500;600;700,800,900&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins',sans-serif;
+  scroll-behavior: smooth;
+}
+p
+{
+  font-weight:300;
+  color: #111;
+}
+.banner
+{
+  position: relative;
+  width: 100%;
+  margin: auto;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(white 50%, yellow 30%, red 60%);
+  background-size: cover;
+}
+.banner img
+{
+  width: 70%;
+}
+.banner .content
+{
+  max-width: 900px;
+  text-align: center;
+}
+.banner .content h2
+{
+  font-size: 5em;
+  color: #fff;
+}
+.banner .content p
+{
+  font-size: 1em;
+  color: #fff;
+}
+.btn
+{
+  font-size: 1em;
+  color: #fff;
+  background: #ff0157;
+  display: inline-block;
+  padding: 10px 30px;
+  margin-top: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+}
+.btn:hover
+{
+  letter-spacing: 6px;
+}
+
+header
+{
+  position: fixed;
+  top: 0%;
+  left: 0;
+  width: 100%;
+  padding: 5px 10px;
+  z-index: 10000;
+  display: flex;
+  background-color: black;
+  background-size: cover;
+  justify-content: space-between;
+  align-items: center;
+  transition: 0.5s;
+}
+header .logo
+{
+  color: #fff;
+  font-weight: 700;
+  font-size: 2em;
+  text-decoration: none;
+}
+header .logo span
+{
+  color: #ff0157;
+}
+header .navigation
+{
+  position:relative;
+  display:flex
+}
+header .navigation li
+{
+  list-style: none;
+  margin-left: 30px;
+}
+header .navigation li a
+{
+  text-decoration: none;
+  color: #fff;
+  font-family: 300;
+}
+
+header .navigation li a:hover
+{
+  color: #ff0157;
+  letter-spacing: 3px;
+}
+
+
+section
+{
+  padding: 100px;
+  background-color: violet;
+}
+.row
+{
+  position: relative;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.row .col50
+{
+  position: relative;
+  width: 48%;
+}
+.titleText
+{
+  color: #111;
+  font-size: 2em;
+  font-weight: 300;
+}
+.titleText span
+{
+  color: #ff0157;
+  font-family: 700;
+  font-size: 1.5em;
+}
+.row .col50 .imgBx
+{
+  position: relative;
+  width: 100%;
+  min-height: 300px;
+}
+.row .col50 .imgBx img
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+.title
+{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.menu .content
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row-reverse;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  background-color: thistle;
+}
+.menu .content .box
+{
+  width: 300px;
+  margin: 20px;
+  border: 15px solid #fff;
+  box-shadow: 0 5px 35px rgba(0, 0, 0, 08);
+  transition: 0.5s;
+}
+
+.menu .content .box:hover
+{
+  transform: translateY(-10px)
+}
+.menu .content .box .imgBx
+{
+  position: relative;
+  width: 125%;
+  height: 200px;
+ }
+
+.menu .content .box .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.menu .content .box .text
+{
+  position: relative;
+  height: 150px;
+  overflow: hidden;
+}
+.menu .content .box.box.active .text
+{
+   height: auto;
+}
+.menu .content .box .text::before
+{
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(transparent, thistle);
+}
+.menu .content .box.active .text::before
+{
+  display: none;
+}
+.menu .content .box .text h3
+{
+  font-weight: 400;
+  color: #111;
+}
+.menu .content .box .text p
+{
+  font-size: 0.9em;
+  font-weight: bold;
+  color: black;
+}
+
+.menu .content .box .text p3
+{
+  font-size: 0.9em;
+  color: black;
+}
+
+.menu .content .box .more
+{
+  position: relative;
+  padding: 10px 15px;
+  background: darkgray;
+  margin-top: 15px;
+  display: inline-block;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: #383838;
+  font-weight: 500;
+  letter-spacing: 2px;
+  font-size: 14px;
+  transition: all 0.5s;
+}
+.menu .content .box .more:hover
+{
+  background-color: #fff;
+  box-shadow: 0 0 2rem rgba(0, 0, 0, 1);
+  transform: translateY(-3px);
+}
+
+.menu .content .box.active .more
+{
+  background: #ff0157;
+  color: #fff;
+}
+
+.menu .content .box .more::before
+{
+  content: 'read more';
+}
+
+.menu .content .box.active .more::before
+{
+  content: 'read less';
+}
+
+.services .content
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  background-color: palegreen;
+}
+.services .content .box
+{
+  width: 180px;
+  margin: 15px;
+  transition: 0.5s;
+}
+.services .content .box:hover
+{
+  transform: translateY(-5px);
+}
+.services .content .box .imgBx
+{
+  position: relative;
+  width: 100%;
+  height: 100px;
+}
+.services .content .box .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+  cursor: pointer;
+}
+.services .content .box .text
+{
+  padding: 15px 0 5px;
+}
+.services .content .box .text h3
+{
+  font-weight: 400;
+  color: #111;
+}
+
+
+.company .content
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  background-color: #ffeead
+}
+.company .content .box
+{
+  width: 255px;
+  margin: 15px;
+  transition: 0.5s;
+}
+.company .content .box:hover
+{
+  transform: translateY(-5px);
+}
+.company .content .box .imgBx
+{
+  position: relative;
+  width: 60%;
+  height: 60px;
+}
+.company .content .box .imgBx img
+{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 80%;
+  object-fit: cover;
+}
+.company .content .box .text
+{
+  padding: 15px 0 5px;
+}
+.company .content .box .text h3
+{
+  font-weight: 400;
+  font-size: small;
+  color: #111;
+}
+
+
+
+.picture .content
+{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-top: 40px;
+  background-color: black;
+}
+.picture .content .box
+{
+  width: 100px;
+  margin: 15px;
+  transition: 0.5s;
+}
+.picture .content .box:hover
+{
+  transform: translateY(-5px);
+}
+.picture .content .box .imgBx
+{
+  position: relative;
+  width: 60%;
+  height: 60px;
+  cursor: pointer;
+}
+
+
+.contact
+{
+  background-color: paleturquoise;
+  background-size: cover;
+}
+.contactForm
+{
+  padding: 75px 50px;
+  background: #fff;
+  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+  margin-top: 50px;
+}
+.contactForm h3
+{
+  color: 111;
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  font-weight: 500;
+}
+.contactForm .inputBox
+{
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.contactForm .inputBox input,
+.contactForm .inputBox textarea
+{
+  width: 100%;
+  border: 1px solid #555;
+  padding: 10px;
+  color: #111;
+  outline: none;
+  font-size: 16px;
+  font-weight: 300;
+  resize: none;
+}
+.contactForm .inputBox input[type="submit"]
+{
+  font-size: 1em;
+  color: #fff;
+  background: #ff0157;
+  display: initial-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  letter-spacing: 2px;
+  transition: 0.5s;
+  max-width: 100px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.container
+{
+  max-width: 1200px;
+  margin: auto;
+}
+.row
+{
+  display: flex;
+  flex-wrap: wrap;
+}
+ul
+{
+  list-style: none;
+}
+.footer
+{
+  background-color: black;
+}
+.footer-col
+{
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-col h4
+{
+  font-size: 20px;
+  color: #ffffff;
+  text-transform: capitalize;
+  margin-bottom: 30px;
+  font-weight: 500;
+  position: relative;
+}
+.footer-col h4::before
+{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  background-color: #ff0157;
+  height: 2px;
+  box-sizing: border-box;
+  width: 50px;
+}
+.footer-col ul li:not(:last-child)
+{
+  margin-bottom: 10px;
+}
+.footer-col ul li a
+{
+  font-size: 16px;
+  text-transform: capitalize;
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 300;
+  color: #bbbbbb;
+  display: block;
+  transition: all 0.3s;
+}
+.footer-col ul li a:hover
+{
+  color: #ff0157;
+  transform: translateX(5px);
+}
+
+.footer-col .social-links img
+{
+  position: relative;
+  top: 0;
+  left: 0;
+  width: 15%;
+  height: 15%;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.5s;
+}
+.footer-col .social-links img:hover
+{
+  transform: translateY(-3px);
+}
+
+.CopyrightText
+{
+  padding: 8px;
+  border-top: 1px solid rgba(0, 0, 0, 1);
+  text-align: center;
+  background: mintcream;
+}
+.CopyrightText p
+{
+  color: #333;
+}
+.CopyrightText a
+{
+  color: #ff0157;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
